@@ -6,12 +6,18 @@ grid-url = "http://localhost:4444/"
 
 [[node.driver-configuration]]
 display-name = "MicrosoftEdge 109.0"
-webdriver-path = "C://Projects//selenium-grid-docker//msedgedriver.exe"
+webdriver-path = "C://Projects//selenium-grid-docker//drivers//msedgedriver-109.0.exe"
 max-sessions = 1
 stereotype = "{\"browserName\": \"MicrosoftEdge\", \"browserVersion\": \"109.0\", \"platformName\": \"Windows\"}"
 
 [[node.driver-configuration]]
 display-name = "Chrome 109.0"
-webdriver-path="C://Projects//selenium-grid-docker//chromedriver.exe"
+webdriver-path="C://Projects//selenium-grid-docker//drivers//chromedriver-109.0.exe"
 max-sessions = 1
 stereotype = "{\"browserName\": \"chrome\", \"browserVersion\": \"109.0\", \"platformName\": \"Windows\"}"
+
+[[node.driver-configuration]]
+display-name = "Firefox 109.0"
+webdriver-path="C://Projects//selenium-grid-docker//drivers//geckodriver-109.0.exe"
+max-sessions = 1
+stereotype = "{\"browserName\": \"firefox\", \"browserVersion\": \"109.0\", \"platformName\": \"Windows\"}"
