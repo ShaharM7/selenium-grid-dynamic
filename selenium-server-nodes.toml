@@ -1,0 +1,17 @@
+# java -jar selenium-server-4.8.0.jar node --config selenium-server-nodes.toml
+
+[node]
+detect-drivers = false
+grid-url = "http://localhost:4444/"
+
+[[node.driver-configuration]]
+display-name = "MicrosoftEdge 109.0"
+webdriver-path = "C://Projects//selenium-grid-docker//msedgedriver.exe"
+max-sessions = 1
+stereotype = "{\"browserName\": \"MicrosoftEdge\", \"browserVersion\": \"109.0\", \"platformName\": \"Windows\"}"
+
+[[node.driver-configuration]]
+display-name = "Chrome 109.0"
+webdriver-path="C://Projects//selenium-grid-docker//chromedriver.exe"
+max-sessions = 1
+stereotype = "{\"browserName\": \"chrome\", \"browserVersion\": \"109.0\", \"platformName\": \"Windows\"}"
