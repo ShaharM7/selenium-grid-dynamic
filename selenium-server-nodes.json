@@ -1,0 +1,35 @@
+{
+    "detect-drivers": true,
+    "grid-url": "http://localhost:4444/",
+    "override-max-sessions": false,
+    "driver-configuration": [
+      {
+        "display-name": "MicrosoftEdge 109.0",
+        "max-sessions": 2,
+        "stereotype": {
+          "browserName": "MicrosoftEdge",
+          "browserVersion": "109.0",
+          "platformName": "Windows"
+        }
+      },
+      {
+        "display-name": "Chrome 109.0",
+        "max-sessions": 3,
+        "stereotype": {
+          "browserName": "chrome",
+          "browserVersion": "109.0",
+          "platformName": "Windows"
+        }
+      },
+      {
+        "display-name": "Firefox 109.0",
+        "max-sessions": 2,
+        "stereotype": {
+          "browserName": "firefox",
+          "browserVersion": "109.0",
+          "platformName": "Windows"
+        }
+      }
+    ]
+  }
+
