@@ -1,0 +1,41 @@
+{
+  "networkConnectionEnabled": false,
+  "chrome": {
+    "chromedriverVersion": "109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs\u002fbranch-heads\u002f5414@{#1172})",
+    "userDataDir": "\u002ftmp\u002f.com.google.Chrome.1o8S7l"
+  },
+  "se:cdpVersion": "109.0.5414.74",
+  "timeouts": {
+    "implicit": 0,
+    "pageLoad": 300000,
+    "script": 30000
+  },
+  "pageLoadStrategy": "normal",
+  "unhandledPromptBehavior": "dismiss and notify",
+  "strictFileInteractability": false,
+  "se:forwardCdp": "ws:\u002f\u002f172.23.0.4:4444\u002fsession\u002fef82049e3ad2e754d8915f9a50fe7b2e\u002fse\u002ffwd",
+  "se:vnc": "ws:\u002f\u002f172.23.0.4:4444\u002fsession\u002fef82049e3ad2e754d8915f9a50fe7b2e\u002fse\u002fvnc",
+  "se:cdp": "ws:\u002f\u002f172.23.0.4:4444\u002fsession\u002fef82049e3ad2e754d8915f9a50fe7b2e\u002fse\u002fcdp",
+  "se:bidiEnabled": false,
+  "proxy": {
+  },
+  "se:vncLocalAddress": "ws:\u002f\u002f172.23.0.4:7900",
+  "goog:chromeOptions": {
+    "debuggerAddress": "localhost:44031"
+  },
+  "webauthn:extension:credBlob": true,
+  "acceptInsecureCerts": false,
+  "browserVersion": "109.0.5414.74",
+  "browserName": "chrome",
+  "platformName": "LINUX",
+  "se:vncEnabled": true,
+  "setWindowRect": true,
+  "webauthn:extension:largeBlob": true,
+  "bstack:options": {
+    "accessKey": "uptTLMfxMatqmnHyztp6",
+    "deviceName": "Samsung Galaxy S20 Plus",
+    "local": "false",
+    "userName": "shahar_yLMDKN"
+  },
+  "webauthn:virtualAuthenticators": true
+}

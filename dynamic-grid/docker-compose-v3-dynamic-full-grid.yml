@@ -1,9 +1,23 @@
-# To execute this docker-compose yml file use `podman-compose -f docker-compose-v3-full-grid.yml up -d` or `docker-compose -f docker-compose-v3-full-grid.yml up -d`
+# To execute this docker-compose yml file use `docker-compose -f docker-compose-v3-dynamic-grid.yml up -d`
 # Add the `-d` flag at the end for detached execution
-# To stop the execution, hit Ctrl+C, and then `podman-compose -f docker-compose-v3-full-grid.yml down` or `docker-compose -f docker-compose-v3-full-grid.yml down`
+# To stop the execution, hit Ctrl+C, and then `docker-compose -f docker-compose-v3-dynamic-grid.yml down`
 
 version: "3"
 services:
+  node-docker:
+    image: selenium/node-docker:4.8.0-20230123
+    volumes:
+      - ./assets:/opt/selenium/assets
+      - ./config.toml:/opt/bin/config.toml
+    depends_on:
+      - selenium-event-bus
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-event-bus
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_VNC_NO_PASSWORD=1
+
+
   selenium-event-bus:
     image: docker.io/selenium/event-bus:4.8.0-20230123
     container_name: selenium-event-bus
@@ -64,36 +78,3 @@ services:
       - SE_SESSIONS_MAP_PORT=5556
       - SE_SESSION_QUEUE_HOST=selenium-session-queue
       - SE_SESSION_QUEUE_PORT=5559
-
-  chrome:
-    image: docker.io/selenium/node-chrome:4.8.0-20230123
-    shm_size: 2gb
-    depends_on:
-      - selenium-event-bus
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-event-bus
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_VNC_NO_PASSWORD=1
-
-  edge:
-    image: docker.io/selenium/node-edge:4.8.0-20230123
-    shm_size: 2gb
-    depends_on:
-      - selenium-event-bus
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-event-bus
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_VNC_NO_PASSWORD=1
-
-  firefox:
-    image: docker.io/selenium/node-firefox:4.8.0-20230123
-    shm_size: 2gb
-    depends_on:
-      - selenium-event-bus
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-event-bus
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_VNC_NO_PASSWORD=1

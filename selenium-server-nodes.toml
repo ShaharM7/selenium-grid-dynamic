@@ -1,23 +1,21 @@
 # java -jar selenium-server-4.8.0.jar node --config selenium-server-nodes.toml
 
 [node]
-detect-drivers = false
+detect-drivers = true
 grid-url = "http://localhost:4444/"
+override-max-sessions = false
 
 [[node.driver-configuration]]
 display-name = "MicrosoftEdge 109.0"
-webdriver-path = "C://Projects//selenium-grid-docker//drivers//msedgedriver-109.0.exe"
-max-sessions = 1
+max-sessions = 2
 stereotype = "{\"browserName\": \"MicrosoftEdge\", \"browserVersion\": \"109.0\", \"platformName\": \"Windows\"}"
 
 [[node.driver-configuration]]
 display-name = "Chrome 109.0"
-webdriver-path="C://Projects//selenium-grid-docker//drivers//chromedriver-109.0.exe"
-max-sessions = 1
+max-sessions = 3
 stereotype = "{\"browserName\": \"chrome\", \"browserVersion\": \"109.0\", \"platformName\": \"Windows\"}"
 
 [[node.driver-configuration]]
 display-name = "Firefox 109.0"
-webdriver-path="C://Projects//selenium-grid-docker//drivers//geckodriver-109.0.exe"
-max-sessions = 1
+max-sessions = 2
 stereotype = "{\"browserName\": \"firefox\", \"browserVersion\": \"109.0\", \"platformName\": \"Windows\"}"
